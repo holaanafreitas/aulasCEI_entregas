@@ -1,0 +1,194 @@
+/* Reset CSS  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CSS con metodologia BEM  */
+
+/* css header  */
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.Header-img {
+    scale: 50%;
+}
+
+.Header-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.Header-ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.Header-li {
+    font-size: 8pt;
+}
+
+.Header-a--nav {
+    text-decoration: none;
+    color: black;
+}
+
+/* css main  */
+.Main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+
+}
+
+/* .Main-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem
+} */
+
+.Main-p {
+    text-align: left;
+    font-size: 9pt;
+    width: 70%;
+}
+
+/* css main grid  */
+.Main-sectionGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.Main-sectionGrid img {
+    width: 100%;
+    /* Ensures the image fills the container */
+    height: 100%;
+    /* Ensures consistent height */
+    object-fit: cover;
+    /* Keeps images proportional and prevents stretching */
+}
+
+.Main-a {
+    align-self: center;
+    gap: 1rem;
+    font-size: 8pt;
+}
+.Main-i {
+    padding-right: 1rem;
+}
+
+/* css footer  */
+hr {
+    opacity: 50%;
+
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.Footer-p {
+    font-size: 8pt;
+}
+
+.Footer-nav {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.Footer-li {
+    list-style: none;
+    font-size: 8pt;
+}
+
+.Footer-a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Media Query para menores que 400px */
+@media screen and (max-width: 400px) {
+    .Header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Main-p {
+        text-align: justify;
+        font-size: 9pt;
+        width: 100%;
+    }
+    
+    /* css main grid  */
+    .Main-sectionGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        gap: 20px;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .Footer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: column;
+        margin-bottom: 3rem;
+
+    }
+}
+/* Media Query para Tablets */
+
+@media screen and (min-width: 401px) and (max-width:1024px) {
+    /* css main grid  */
+    .Main-sectionGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .Main-p {
+        text-align: left;
+        font-size: 9pt;
+        width: 80%;
+    }
+    
+}
