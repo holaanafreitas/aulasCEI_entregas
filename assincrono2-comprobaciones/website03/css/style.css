@@ -1,0 +1,144 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 9pt; 
+    
+}
+
+/* Header css */
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+    width: 100%;
+}
+.Header-logo {
+    height: 13px;
+}
+.Header-nav {
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+}
+/* .Header-navIl {} */
+.Header-navA {
+    text-decoration: none;
+    color: black;
+}
+.Header-social {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+.Header-socialA {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main Css */
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+}
+
+/* Section Hero */
+.Main-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "info photo .";
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* .Hero {} */
+.Hero-info {
+    padding-right: 30px;
+    grid-area: info;
+    
+}
+.Hero-img {
+    background-color: black;
+    height: 300px;
+    width: 500px;
+    grid-area: photo;
+
+    object-fit: fill;
+}
+.Hero-button {
+    border: none;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 8pt;
+}
+.Hero-info--h1 {
+    font-weight: lighter;
+    font-size: 16pt;
+}
+.Hero-info--p {
+    padding-top: 10px;
+    font-size: 8pt;
+}
+
+/* Section Texts  */
+
+
+
+
+/* Footer css */
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 60%;
+}
+.Footer-logo {
+    height: 15px;
+}
+.Footer-txt {
+    font-size: 7pt;
+}
+.Footer-inputEmail {
+    border: 0px;
+}
+.Footer-button {
+
+}
+.Footer-mailSub{
+    display: flex;
+}
+.Footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    list-style: none;
+}
+.Footer-socialA {
+    text-decoration: none;
+    color: black;
+}
