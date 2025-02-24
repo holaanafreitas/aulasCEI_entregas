@@ -93,9 +93,9 @@ body {
     gap: 2rem;
     list-style: none;
 }
-.Footer-li {
-    scale: 130%;
-}
+/* .Footer-li {
+    
+} */
 .Footer-p--copyright {
     margin-top: 2rem;
     margin-bottom: 1rem;
