@@ -28,7 +28,6 @@ projects.forEach((project, idx) => {
         body.style.backgroundImage = `url(${imgList[idx]})`;
         body.style.backgroundSize = "cover";
         body.style.backgroundPosition = "center";
-        body.style.opacity = 0.7;
     });
 
     project.addEventListener("mouseout", () => {
