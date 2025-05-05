@@ -1,0 +1,132 @@
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--beige);
+    font-size: 10pt;
+
+    --navy-blue: #2F4156;
+    --teal-blue: #567C8D;
+    --sky-blue: #C8D9E6;
+    --beige: #F5EFEB;
+}
+/* El reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.Tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    width: 370px;
+    height: 700px;
+    background-color: var(--teal-blue);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px var(--sky-blue);
+
+}
+.Tarjeta-header {
+    text-align: center;
+    padding: 1em 1em;
+}
+.Header-nombre {
+    padding: 0.5em;
+}
+.Header-info, .Footer-title {
+    font-size: 10pt;
+}
+.Tarjeta-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    
+}
+.Main-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 200px;
+    box-shadow: 2px 2px 5px var(--navy-blue);
+}
+
+.Main-descrip {
+    max-width: 70%;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+.Main-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    width: 300px;
+
+    list-style: none;
+}
+
+.Main-tags li {
+    background-color: var(--sky-blue);
+    color: var(--navy-blue);
+    padding: 3px 3px;
+    border-radius: 5px;
+
+    transition: all 0.5s ease;
+}
+
+.Main-tags li:hover {
+    background-color: var(--navy-blue);
+    color: var(--beige);
+    transform: scale(1.1);
+
+}
+/* .Tarjeta-footer {
+    padding: 0;
+} */
+
+.Btn {
+    min-width: 150px;
+    height: 30px;
+    background-color: #2F4156;
+    border-radius: 10px;
+    color: var(--beige);
+    cursor: pointer;
+    border: none;
+    box-shadow: 2px 2px 5px var(--navy-blue);
+
+    transition: color 0.8s ease;
+}
+
+.Btn:hover {
+    color: var(--navy-blue);
+    background-color: var(--sky-blue);
+}
+
+.Btn-msg {
+    font-size: 10pt;
+}
+
+.Footer {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+
+}
+
+.Footer li a{
+    color: var(--navy-blue);
+}
