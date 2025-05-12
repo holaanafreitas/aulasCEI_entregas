@@ -1,0 +1,149 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-align: center; */
+}
+
+/* css pixar */
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 300px;
+  height: 120px;
+  /* padding: 0 40px 0 40px; */
+}
+.Logo {
+  width: 150px;
+  height: 30px;
+  object-fit: fill;
+}
+.Header-nav{
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+
+
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 80vh;
+  width: 100vw;
+}
+.Hero-bg {
+  height: 700px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.Hero-title{
+  transform: scale(0.6);
+  position: absolute;
+  
+}
+
+/* Movie section  */
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Movie-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 0px;
+  width: 70vw;
+  height: auto; /* <-- corrigido */
+}
+
+.Movie-subsection1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Subsection2 - estrutura em grid */
+.Movie-subsection2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  /* width: 80%; */
+  margin: 20px 0px;
+}
+
+.Subsection2-2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+
+.Subsection2-2 img,
+.Subsection2-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* imagem + texto sobreposto */
+.Subsection2-3 {
+  position: relative;
+  height: 100%;
+}
+
+.Subsection2-3 div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 24px;
+  max-width: 60%;
+  color: white;
+  
+}
+
+/* footer css */
+.Footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  background-color: #F6F6F4;
+  width: 100%;
+}
+.Footer-a{
+  color: black;
+}
+.Footer-icons{
+  display: flex;
+  gap: 20px;
+  color: black;
+}
+
+.Footer-container{
+  display: flex;
+  gap: 2em;
+}
+.Footer-section{
+  text-align: left;
+}
+.Footer-nav{
+  text-align: left;
+}
+
+.Footer-nav a{
+font-size: 10pt;
+border-bottom: 1px solid black;
+}
+
