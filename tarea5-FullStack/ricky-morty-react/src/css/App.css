@@ -1,0 +1,58 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* NUEVO CSS */
+
+.Nav {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+}
+.Nav-a{
+  border: 1px solid lightgrey;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+}
+
+.Card-charac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  padding: 1.2em;
+}
+
+.Card-charac h3 {
+  font-weight: 800;
+}
+
+.Card-charac p {
+  font-style: italic;
+}
