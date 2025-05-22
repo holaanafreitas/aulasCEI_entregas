@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import characMock from "@/data/characMock";
 import {CardCharacter} from "@/components/CardCharacter";
+import FilterSearch from "@/components/FilterSearch";
 
 const Characters = () => {
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    const [pagina, setPagina] = useState(1);
 
     const [characList, setCharacList] = useState([]);
     const [info, setInfo] = useState ({
@@ -15,10 +17,16 @@ const Characters = () => {
         "prev": null
     })
 
+    const [filterParam, setFilterParam] = useState({
+        "status": "",
+        "species": "",
+        "gender": ""
+    });
+
     useEffect(() => {
         // llamar a la función cuando cargo ael componente
         loadCharacters();
-    },[])
+    },[pagina, filterParam])
 
     const loadCharacters =  async () => {
         try {
@@ -28,7 +36,21 @@ const Characters = () => {
             // Limpiamos el error
             setError(null);
 
-            const response = await fetch(`https://rickandmortyapi.com/api/character`);
+            // const response = await fetch(`https://rickandmortyapi.com/api/character?page=${pagina}&species=${filterParam.species}&status=${filterParam.status}`);
+
+            let url = `https://rickandmortyapi.com/api/character?page=${pagina}`;
+
+            if (filterParam.species) {
+            url += `&species=${filterParam.species}`;
+            }
+            if (filterParam.status) {
+            url += `&status=${filterParam.status}`;
+            }
+            if (filterParam.gender) {
+            url += `&gender=${filterParam.gender}`;
+            }
+
+            const response = await fetch(url);
 
             //verificamos se la resposta é correcta
             if(!response.ok){
@@ -53,13 +75,33 @@ const Characters = () => {
         }
     }
 
+    const loadFilterParam = () => {
+
+    }
     // const characList = characMock.results;
     // const info = characMock.info;
 
-    console.log(characMock);
+    // console.log(characMock);
+
+    const handlePrev = () => {
+        if (pagina-1 < 1) return;
+
+        setPagina(prev => prev -1);
+    }
+
+    const handleNext = () => {
+        if (!info.next) return;
+        if(pagina+1 > info.pages) return;
+
+        setPagina(prev => prev+1);
+    }
+
     return ( 
         <div>
             <h3>Characters</h3>
+
+            <FilterSearch  setFilterParam={setFilterParam}/>
+
             <div className="Card">
                 { characList.map( p => {
                     return (
@@ -69,11 +111,11 @@ const Characters = () => {
             </div>
 
 
-            <button>Prev</button>
+            <button onClick={handlePrev}>Prev</button>
             <span>items: {info.count}</span>
-            &nbsp; | &nbsp;
+            &nbsp; | &nbsp; {pagina} &nbsp; | &nbsp;
             <span> info: {info.pages}</span>
-            <button>Next</button>
+            <button onClick={handleNext}>Next</button>
         </div>
      );
 }
