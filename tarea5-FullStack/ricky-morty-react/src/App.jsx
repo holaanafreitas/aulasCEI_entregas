@@ -9,7 +9,6 @@ import Episodes from '@/pages/Episodes'
 
 function App() {
    
-
   const params = new URLSearchParams(window.location.search);
   const pagina = params.get("page") || "characters"; 
 

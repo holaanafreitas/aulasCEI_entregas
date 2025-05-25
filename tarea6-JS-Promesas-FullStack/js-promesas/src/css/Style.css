@@ -1,0 +1,145 @@
+
+/* nav css component */
+.Nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.Nav-a {
+    background-color: black;
+    color: white;
+    padding: 0.5em 1em ;
+    border-radius: 30px;
+
+    transition: 0.5s ease;
+}
+
+.Nav-a:hover, .Nav-a.isActive {
+    background-color: goldenrod;
+    color: black;
+    
+}
+/* ------------------- */
+/* POKEMON STYLES */
+.Main-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card-pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;  
+    
+    padding: 1em 1em;
+
+}
+.Card-pokemonInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 300px;
+    border: 4px solid var(--primary);
+    border-radius: 30px;
+
+    background-color: white;
+    box-shadow: 5px 5px var(--primary);
+    transition: 1s ease;
+}
+
+.Card-pokemonInfo img {
+    border: 2px solid lightgray;
+    border-radius: 100px;
+    width: 130px;
+}
+
+.Card-pokemonInfo:hover{
+    background-color: var(--primary);
+    border: 4px solid var(--secundary);
+    box-shadow: 5px 5px var(--secundary);
+    transform: scale(1.02);
+}
+
+
+/* ------------------- */
+/* DED STYLES */
+
+
+.Error-txt {
+    color: red;
+}
+
+.Card-ded {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;  
+    
+    padding: 3em 3em;
+}
+
+.Card-dedInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--primary);
+    border-radius: 30px;
+
+    background-color: white;
+    box-shadow: 5px 5px var(--primary);
+    transition: 1s ease;
+}
+
+.Card-dedInfo:hover{
+    background-color: var(--primary);
+    border: 4px solid var(--secundary);
+    box-shadow: 5px 5px var(--secundary);
+    transform: scale(1.02);
+}
+
+.Card-dedInfo p{
+    color: rgb(69, 69, 69);
+}
+
+
+/* Footer css  component*/
+.Footer {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 2em;
+}
+
+.Footer span {
+    font-size: 10pt;
+    text-align: center;
+}
+
+.Footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1em 1em;
+}
+
+.Footer section i {
+    color: goldenrod;
+    transform: scale(1.5);
+}
+

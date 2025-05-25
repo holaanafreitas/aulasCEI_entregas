@@ -47,11 +47,18 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-
+  
   border: 1px solid lightgrey;
   box-shadow: 5px 5px 1px lightgray;
   border-radius: 10px;
   padding: 1.2em;
+  
+  transition: all .5s ease ;
+}
+
+.Card-charac:hover {
+  transform: scale(1.05);
+  background-color: rgb(189, 179, 211);
 }
 
 .Card-charac h3 {
@@ -67,6 +74,25 @@
   border: 2px solid rgb(123, 123, 123);
 }
 
+.Card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.Filter-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .Filters-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 
 }
