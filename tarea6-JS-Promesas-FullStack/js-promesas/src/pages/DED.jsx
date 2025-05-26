@@ -36,10 +36,11 @@ const DED = () => {
   
     return (
       <section className="Main-container">
-        <h2>Languages of Dungeons & Dragons</h2>
-  
-        {loading && <p>Loading data...</p>}
-        {error && <p className="Error-txt">{error}</p>}
+        <div>
+          <h2>Languages of Dungeons & Dragons</h2>
+          {loading && <p>Loading data...</p>}
+          {error && <p className="Error-txt">{error}</p>}
+        </div>
   
         <div className="Card-ded">
           {detailsList.map((lang) => (

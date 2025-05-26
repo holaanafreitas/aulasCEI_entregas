@@ -36,11 +36,13 @@ const PokeApi = () => {
 
     return ( 
         <section className="Main-container">
-        <h2>Pokemóns!</h2>
-  
-        {loading && <p>Loading data...</p>}
-        {error && <p className="Error-txt">{error}</p>}
-  
+        
+        <div>
+            <h2>Pokemóns!</h2>
+            {loading && <p>Loading data...</p>}
+            {error && <p className="Error-txt">{error}</p>}
+        </div>
+        
         <div className="Card-pokemon">
           {detailsList.map((pokemon) => (
             <div key={pokemon.id} className="Card-pokemonInfo">

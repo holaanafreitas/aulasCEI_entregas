@@ -115,6 +115,42 @@
     color: rgb(69, 69, 69);
 }
 
+/* ------------------- */
+/* RAMDOM USERS STYLES */
+
+.Card-userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 300px;
+    border: 4px solid var(--primary);
+    border-radius: 30px;
+
+    background-color: white;
+    box-shadow: 5px 5px var(--primary);
+    transition: 1s ease;
+}
+
+.Card-userInfo:hover {
+    background-color: var(--primary);
+    border: 4px solid var(--secundary);
+    box-shadow: 5px 5px var(--secundary);
+    transform: scale(1.02);
+}
+
+.Card-userInfo img {
+    border-radius: 100px;
+    box-shadow: 2px 2px 3px lightgray;
+}
+
+.Card-userInfo p {
+    color: rgb(69, 69, 69);
+    padding: 5px 5px;
+    margin: 0 0;
+}
 
 /* Footer css  component*/
 .Footer {
